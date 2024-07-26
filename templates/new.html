@@ -1,0 +1,61 @@
+{{define "New"}}
+{{template "_head"}}
+{{template "_menu"}}
+    <body>
+        <div class="container">
+                <div class="jumbotron jumbotron-fluid">
+                    <div class="container">
+                        <h1 class="display-5">Nova Pendência</h1>
+                        <p class="lead">Insira os detalhes</p>
+                    </div>
+                </div>
+                <form method="POST" action="insert">
+                    <input type="hidden" name="id" value="{{.Id}}">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="form-group">
+                                <label for="nome">Título:</label>
+                                <input type="text" name="titulo" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="form-group">
+                                <label for="descricao">Descrição:</label>
+                                <input type="text" name="descricao" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="form-group">
+                                <label for="descricao">Evento:</label>
+                                <input type="text" name="evento" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="form-group">
+                                <label for="quantidade">Responsável:</label>
+                                <input type="text" name="responsavel" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <div class="form-group">
+                                <label for="preco">Protocolo:</label>
+                                <input type="number" name="protocolo" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" value="salvar" class="btn btn-success">Salvar</button>
+                    <a class="btn btn-info" href="/">Voltar</a>
+                </form>
+        </div>
+    </body>
+</html>
+{{end}}
